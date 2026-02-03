@@ -32,4 +32,4 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker build -t cdemmer04/container:latest .
-          docker push demmer04/container:latest
+          docker push cdemmer04/container:latest
