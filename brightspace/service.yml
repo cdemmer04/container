@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: first-service
+  name: brightspace-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
-    app: my-container
+    app: brightspace
   ports:
     - port: 80
       targetPort: 80
