@@ -31,8 +31,10 @@ jobs:
           password: ${{ secrets. DOCKER_PASSWORD }}
       - name: Build and push Docker images
         run: |
-          docker build -t cdemmer04/bison:latest ./bison/
+          cd $GITHUB_WORKSPACE/bison
+          docker build -t cdemmer04/bison:latest .
           docker push cdemmer04/bison:latest
 
-          docker build -t cdemmer04/brightspace:latest ./brightspace/
+          cd $GITHUB_WORKSPACE/brightspace
+          docker build -t cdemmer04/brightspace:latest .
           docker push cdemmer04/brightspace:latest
