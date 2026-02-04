@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: CI Week 2
 
 # Controls when the workflow will run
 on:
@@ -31,10 +31,8 @@ jobs:
           password: ${{ secrets. DOCKER_PASSWORD }}
       - name: Build and push Docker images
         run: |
-          cd $GITHUB_WORKSPACE/bison
-          docker build -t cdemmer04/bison:latest .
+          docker build -t cdemmer04/bison:latest -f $GITHUB_WORKSPACE/bison/Dockerfile
           docker push cdemmer04/bison:latest
 
-          cd $GITHUB_WORKSPACE/brightspace
-          docker build -t cdemmer04/brightspace:latest .
+          docker build -t cdemmer04/brightspace:latest -f $GITHUB_WORKSPACE/brightspace/Dockerfile
           docker push cdemmer04/brightspace:latest
