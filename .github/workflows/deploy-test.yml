@@ -59,6 +59,6 @@ jobs:
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
       run: |
-        IMAGE_URI="$GAR_ZONE-docker.pkg.dev/$PROJECT_ID/$GAR_REPO/$IMAGE:$IMAGE_TAG"
-        envsubst < deploy.yml | kubectl apply -f -
-        kubectl rollout status deployment/first-deployment
+            kubectl set image deployment/first-deployment my-container=$GAR_ZONE-docker.pkg.dev/$PROJECT_ID/$GAR_REPO/$IMAGE:$IMAGE_TAG
+            kubectl rollout status deployment/first-deployment
+
