@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-container
-        image: PLACEHOLDER
+        image: europe-west1-docker.pkg.dev/opdrachten-486314/pcc-week3/app:test
         ports:
         - containerPort: 80
 
