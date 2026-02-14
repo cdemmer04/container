@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: first-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-container
+      env: main
+  template:
+    metadata:
+      labels:
+        app: my-container
+        env: main
+    spec:
+      containers:
+      - name: my-container
+        image: europe-west1-docker.pkg.dev/opdrachten-486314/pcc-week3/app:main
+        ports:
+        - containerPort: 80
+
+
