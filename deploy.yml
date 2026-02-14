@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-container
-        image: cdemmer04/container:latest
+        image: ${IMAGE_URI}
         ports:
         - containerPort: 80
 
