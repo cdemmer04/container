@@ -6,9 +6,9 @@ name: CI Week 1 en 2
 on:
   # Triggers the workflow on push or pull request events but only for the $default-branch branch
   push:
-    branches: [ main ]
+    branches: [ week1_2 ]
   pull_request:
-    branches: [ main ]
+    branches: [ week1_2 ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
