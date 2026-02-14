@@ -7,7 +7,6 @@ spec:
   selector:
     matchLabels:
       app: my-container
-      env: test
   template:
     metadata:
       labels:
