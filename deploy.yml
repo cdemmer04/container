@@ -12,6 +12,7 @@ spec:
     metadata:
       labels:
         app: my-container
+        env: test
     spec:
       containers:
       - name: my-container
