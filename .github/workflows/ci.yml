@@ -6,9 +6,9 @@ name: CI Week 1 en 2
 on:
   # Triggers the workflow on push or pull request events but only for the $default-branch branch
   push:
-    branches: [ main ]
+    branches: [ test ]
   pull_request:
-    branches: [ main ]
+    branches: [ test ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -31,4 +31,4 @@ jobs:
           password: ${{ secrets. DOCKER_PASSWORD }}
       - name: Build and push Docker image
         run: |
-          echo "Main branch pipeline"
+          echo "Test branch pipeline"
