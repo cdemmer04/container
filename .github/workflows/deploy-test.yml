@@ -61,4 +61,5 @@ jobs:
     - name: Deploy
       run: |-
         kubectl apply -f deploy.yml
+        kubectl rollout restart deployment/first-deployment-main
         kubectl get pods
