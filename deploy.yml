@@ -16,6 +16,7 @@ spec:
       containers:
       - name: my-container
         image: europe-west1-docker.pkg.dev/opdrachten-486314/pcc-week3/app:main
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
 
