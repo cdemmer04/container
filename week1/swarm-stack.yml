@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
 
-  eshopwebmvc:
+  website:
     image: ${DOCKER_REGISTRY}/chieldemmer:latest
     deploy:
       replicas: 2
